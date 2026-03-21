@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: PepsiCo API
+  description: >-
+    PepsiCo provides partner APIs for supply chain integration, product data, and retail analytics. These APIs support distribution partners and retail customers in managing PepsiCo product operations.
+  version: '1.0'
+  contact:
+    name: PepsiCo Developer Support
+    url: https://www.pepsico.com/our-stories/digital-innovation
+externalDocs:
+  description: Documentation
+  url: https://www.pepsico.com/our-stories/digital-innovation
+servers:
+  - url: https://api.pepsico.com
+    description: Production
+tags:
+  - name: Food
+    description: Food operations
+security:
+  - bearerAuth: []
+paths:
+  /status:
+    get:
+      operationId: getStatus
+      summary: Get API status
+      description: >-
+        Returns the current status of the API.
+      tags:
+        - Food
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  version:
+                    type: string
+        '401':
+          description: Unauthorized
+        '429':
+          description: Too many requests
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
