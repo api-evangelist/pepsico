@@ -1,17 +1,15 @@
 aid: pepsico
-url: 
-  https://raw.githubusercontent.com/api-evangelist/pepsico/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/pepsico/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis:
   - aid: pepsico:pepsico-api
     name: PepsiCo API
     tags:
-      - Food
       - Beverages
-      - Supply Chain
+      - Food
       - Retail
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Supply Chain
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.pepsico.com
     humanURL: https://www.pepsico.com/our-stories/digital-innovation
     properties:
