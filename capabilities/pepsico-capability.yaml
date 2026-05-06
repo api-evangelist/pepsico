@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PepsiCo API
+  description: PepsiCo provides partner APIs for supply chain integration, product data, and retail analytics. These APIs
+    support distribution partners and retail customers in managing PepsiCo product operations.
+  tags:
+  - Pepsico
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: pepsico
+    baseUri: https://api.pepsico.com
+    description: PepsiCo API HTTP API.
+    authentication:
+      type: bearer
+      token: '{{PEPSICO_TOKEN}}'
+    resources:
+    - name: status
+      path: /status
+      operations:
+      - name: getstatus
+        method: GET
+        description: Get API status
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: pepsico-rest
+    description: REST adapter for PepsiCo API.
+    resources:
+    - path: /status
+      name: getstatus
+      operations:
+      - method: GET
+        name: getstatus
+        description: Get API status
+        call: pepsico.getstatus
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: pepsico-mcp
+    transport: http
+    description: MCP adapter for PepsiCo API for AI agent use.
+    tools:
+    - name: getstatus
+      description: Get API status
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: pepsico.getstatus
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    PEPSICO_TOKEN: PEPSICO_TOKEN
