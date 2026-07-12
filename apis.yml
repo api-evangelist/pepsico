@@ -37,6 +37,10 @@ apis:
       PepsiCo provides partner APIs for supply chain integration, product data, and retail analytics. These APIs support
       distribution partners and retail customers in managing PepsiCo product operations.
 common:
+  - type: DomainSecurity
+    url: security/pepsico-domain-security.yml
+  - type: Authentication
+    url: authentication/pepsico-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/pepsico
   - type: Website
