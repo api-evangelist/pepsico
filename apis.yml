@@ -4,9 +4,22 @@ description: >-
   PepsiCo is one of the world's largest food and beverage companies, with a portfolio of brands including Pepsi-Cola,
   Mountain Dew, Frito-Lay, Quaker, Tropicana, and Gatorade.
 kind: contract
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pepsico.png
 tags:
   - Beverages
   - Food
@@ -18,24 +31,18 @@ created: '2026-03-21'
 modified: '2026-05-19'
 specificationVersion: '0.20'
 apis:
-  - aid: pepsico:pepsico-api
-    name: PepsiCo API
-    tags:
-      - Beverages
-      - Food
-      - Retail
-      - Supply Chain
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.pepsico.com
-    humanURL: https://www.pepsico.com/our-stories/digital-innovation
-    properties:
-      - url: https://www.pepsico.com/our-stories/digital-innovation
-        type: Documentation
-      - url: openapi/pepsico-pepsico-api-openapi.yml
-        type: OpenAPI
-    description: >-
-      PepsiCo provides partner APIs for supply chain integration, product data, and retail analytics. These APIs support
-      distribution partners and retail customers in managing PepsiCo product operations.
+- aid: pepsico:pepsico-food-api
+  name: PepsiCo Food API
+  description: Food operations
+  humanURL: https://www.pepsico.com/our-stories/digital-innovation
+  baseURL: https://api.pepsico.com
+  tags:
+  - Food
+  properties:
+  - type: OpenAPI
+    url: openapi/pepsico-food-api-openapi.yml
+  - type: Documentation
+    url: https://www.pepsico.com/our-stories/digital-innovation
 common:
   - type: AgenticAccess
     url: agentic-access/pepsico-agentic-access.yml
