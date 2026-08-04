@@ -1,0 +1,14 @@
+{
+  "provider": "pepsico",
+  "sources": [
+    "pepsico-food-api-openapi.yml"
+  ],
+  "outputs": [
+    "pepsico-food-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
