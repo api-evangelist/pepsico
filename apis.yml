@@ -4,6 +4,17 @@ description: >-
   PepsiCo is one of the world's largest food and beverage companies, with a portfolio of brands including Pepsi-Cola,
   Mountain Dew, Frito-Lay, Quaker, Tropicana, and Gatorade.
 kind: contract
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
