@@ -1,7 +1,9 @@
 ---
 title: PepsiCo Deepens AI Capabilities with Google Cloud
 url: https://www.googlecloudpresscorner.com/2026-04-22-PepsiCo-Deepens-AI-Capabilities-with-Google-Cloud
-date: '2026-05-25'
+published: '2026-04-22'
+date_basis: url-derived
+harvested: '2026-05-25'
 query: '"PepsiCo" press release artificial intelligence'
 position: 3
 source: serpapi-google

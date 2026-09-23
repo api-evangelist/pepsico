@@ -1,7 +1,9 @@
 ---
 title: Stories | PepsiCo Newsroom
 url: https://www.pepsico.com/en/newsroom/stories-category
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"PepsiCo" press release artificial intelligence'
 position: 4
 source: serpapi-google
